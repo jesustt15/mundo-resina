@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$colorprimary: #199cb5;
+$colorprimarylight: #61bdd1;
+$colorprimaryextralight: #cfe6ea;
+$colorsecondarylight: #ebdfca;
+$colorsecondarylight: #f4f1eb;
+
+%mybasefont {
+font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+%mytitlefont {
+    font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 750;
+      font-size: 5rem;
+   }
+
+%btn-primary{
+    padding: 15px 25px;
+    border-radius: 8px;
+    background-color: $colorprimary;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+%btn-warning{
+    background-color: #FEDB25;
+    color: black;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 15px 25px;
+    text-decoration: none;
+}
+%btn-primary-hover {
+    color: $colorprimary;
+    background-color: white;
+    border: 1px solid ;
+    border-color: $colorprimary;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    @extend %mybasefont;
+}
+
+
+.navbar {
+    max-width: 100%;
+    padding: 1% 0%;
+    min-height: 72px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $colorprimaryextralight;
+    
+
+    
+}
+.logo{
+    max-width: 74px;
+    min-height: 72px;
+    align-self: center;
+   
+}
+.links{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @extend %mybasefont;
+    
+}
+
+.link {
+    text-decoration: none;
+}
+.link:visited{
+    color: black;
+}
+.link:hover{
+    color: $colorprimarylight;
+}
+//hero section
+
+.hero{
+    max-width: 100%;
+    min-height: 25%;
+    padding: 0 95px 0px 95px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding: 3%;
+    margin-top: -75px;
+    background: linear-gradient(0deg, #FFFFFF 48%, #CFE6EA 100%);
+
+}
+
+.container{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    @extend %mytitlefont;
+
+}
+
+.info {
+    @extend %mybasefont;
+    max-width: 90%;
+    margin-top: 2%;
+}
+
+.elipse{
+    max-width: 50%;
+    padding: 3px;
+    display: flex;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.primary{
+    @extend %btn-primary;
+    @extend %mybasefont;
+    width: 32%;
+    margin-top: 5%;
+    font-size: 1rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    ;
+}
+.primary:hover {
+    @extend %btn-primary-hover;
+}
+//destacados section
+.franja{
+    background-color: $colorprimarylight;
+    max-width: 95% ;
+    min-height: 230px;
+    padding: 30px;
+    margin: -5px 25px 0 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards {
+
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 4rem;
+
+}
+
+.card-container {
+    position: relative;
+    width: 177px;
+    height: 177px;
+
+
+
+  }
+
+.card{
+    background-color: white;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 177px;
+    height: 177px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.hovered {
+    transform: translateY(-40%);
+}
+.button-container{
+   
+position: absolute;
+  top: 90%; /* Center vertically */
+  left: 20%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for both the button's width and height */
+  display: none;
+}
+.button-container.visible {
+    display: block; /* Button container appears when hovered */
+
+  }
+.oculto{
+    @extend %btn-warning;
+    @extend %mybasefont;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+span {
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.card-images{
+    width: 138px;
+    height: 139px;
+    top: 32px;
+}
+
+.destacados {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+}
+
+.destacados-title {
+    @extend %mytitlefont;
+    font-size: 3rem;
+    color: white;
+    max-width:  80%;
+    min-height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.destacados-desc {
+    @extend %mybasefont;
+    color: white;
+}
+
+
+
+
+
