@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$colorprimary: #199cb5;
+$colorprimarylight: #61bdd1;
+$colorprimaryextralight: #cfe6ea;
+$colorsecondarylight: #ebdfca;
+$colorsecondarylight: #f4f1eb;
+
+%mybasefont {
+font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+%mytitlefont {
+    font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 750;
+      font-size: 5rem;
+   }
+
+//navbar
+.navbar {
+    max-width: 100%;
+    padding: 1% 0%;
+    min-height: 72px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $colorprimaryextralight;
+    
+
+    
+}
+.logo{
+    max-width: 74px;
+    min-height: 72px;
+    align-self: center;
+   
+}
+.links{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @extend %mybasefont;
+    
+}
+
+.link {
+    text-decoration: none;
+}
+.link:visited{
+    color: black;
+}
+.link:hover{
+    color: $colorprimarylight;
+}
